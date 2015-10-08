@@ -8,6 +8,6 @@
 <link rel="stylesheet" type="text/css" href="resources/styles/tyyli.css">
 </head>
 <body>
-	<h1>Task Manageri</h1>
+	<h1>Task Manager</h1>
 </body>
 </html>

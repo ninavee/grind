@@ -1,13 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Task Manager</title>
-<link rel="stylesheet" type="text/css" href="resources/styles/tyyli.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>G R I N D</title>
+<link rel="stylesheet" type="text/css" href="tyyli.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-	<h1>Task Manager</h1>
+	<div class="container">
+    	<div class="header">
+			<h1>G R I N D</h1>
+		</div>
+		<div class="task">
+		TESTITESTITESTI	ja tähän kaikki systeemit
+		</div>	
+		
+		<div class="addtask">
+        	<div class="input-group">
+      		<input id="task" type="text" class="form-control" placeholder="Kirjoita tähän seuraava tehtävä!" /> 
+            <input id="info" type="text" class="form-control" placeholder="Kirjoita tähän lisätiedot" /> 
+            <!-- tähän se datepickeri -->
+            <button id="add" type="button" class="btn btn-default">Lisää</button>
+            </div>
+		</div>
+	</div>
+	
 </body>
 </html>

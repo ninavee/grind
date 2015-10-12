@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header {
+	margin: auto;
+	width: 100%;
+}
+
+.container {
+	  padding: 20px;
+	
+}
+
+.task {
+		background: lightgrey;
+		border-style: solid;
+		border-color: lightgrey;
+		border-width: 1px;
+		border-radius: 4px;
+	  	padding: 20px;
+}
+
+.addtask {
+	padding: 20px;
+}

@@ -1,0 +1,9 @@
+CREATE TABLE tehtava 
+(
+t_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+t_kuvaus TEXT NOT NULL,
+t_lisatiedot TEXT,
+t_status INT NOT NULL DEFAULT '0',
+t_deadlinedtm TIMESTAMP,
+t_muistutusdtm TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

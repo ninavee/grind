@@ -34,7 +34,7 @@ public class TehtavaDaoImpl implements TehtavaDao {
 	}
 	
 	// Tehtävän lisäys
-	public void add(Tehtava tehtava) {
+	public void lisaaTehtava(Tehtava tehtava) {
 		final String sql = "INSERT INTO Tehtava(t_kuvaus, t_lisatiedot, t_status, t_deadlinedtm, t_muistutusdtm) values(?, ?, ?, ?, ?, ?)";
 		final String kuvaus = tehtava.getKuvaus();
 		final String lisatiedot = tehtava.getLisatiedot();
@@ -68,11 +68,7 @@ public class TehtavaDaoImpl implements TehtavaDao {
 		List<Tehtava> tehtavat = jdbcTemplate.query(sql, mapper);
 		return tehtavat;
 	}
-
-	public void lisaaTehtava(Tehtava tehtava) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	/*
 	//Tehtävän poisto
 	public void poistaTehtava(int id) {

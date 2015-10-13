@@ -68,12 +68,23 @@ public class TehtavaDaoImpl implements TehtavaDao {
 		List<Tehtava> tehtavat = jdbcTemplate.query(sql, mapper);
 		return tehtavat;
 	}
+
+	public void lisaaTehtava(Tehtava tehtava) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	//Tehtävän poisto
-	public void poistaTehtava(int id){
-		String sql = "DELETE from tehtava WHERE t_id = ?";
-		PreparedStatement ps = connection.prepareStatement(sql);
-		ps.setInt(1, id);
+	public void poistaTehtava(int id) {
+		try {
+			String sql = "DELETE from tehtava WHERE t_id = ?";
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setInt(1, id);
+			
+			ps.executeUpdate();
+		} catch(Exception e){
+			throw new DaoPoikkeus("Tehtävän poisto epäonnistui", e);
+		}
 		
 		
 	}

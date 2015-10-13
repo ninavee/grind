@@ -2,6 +2,8 @@ package dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.springframework.jdbc.core.RowMapper;
 
@@ -16,9 +18,8 @@ public class TehtavaRowMapper implements RowMapper<Tehtava> {
 		tehtava.setKuvaus(rs.getString("t_kuvaus"));
 		tehtava.setLisatiedot(rs.getString("t_lisatiedot"));
 		tehtava.setStatus(rs.getInt("t_status"));
-		tehtava.setPvm(rs.getTimestamp("t_deadlinedtm").toLocalDateTime().toLocalDate());
-		tehtava.setAika(rs.getTimestamp("t_deadlinedtm").toLocalDateTime().toLocalTime());
-		tehtava.setMuistutusPvmaika(rs.getTimestamp("t_muistutusdtm").toLocalDateTime());
+		tehtava.setPvmaika(LocalDateTime.parse(rs.getString("t_deadlinedtm"), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
+		tehtava.setMuistutusPvmaika(LocalDateTime.parse(rs.getString("t_muistutusdtm"), DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
 		return tehtava;
 	}
 }

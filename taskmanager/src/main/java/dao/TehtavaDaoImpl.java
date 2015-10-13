@@ -3,8 +3,9 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 //import java.util.List;
 import javax.inject.Inject;
@@ -39,8 +40,11 @@ public class TehtavaDaoImpl implements TehtavaDao {
 		final String kuvaus = tehtava.getKuvaus();
 		final String lisatiedot = tehtava.getLisatiedot();
 		final int status = tehtava.getStatus();
-		final LocalDateTime deadlinedtm = tehtava.getPvmaika();
-		final LocalDateTime muistutusdtm = tehtava.getMuistutusPvmaika();
+		
+		DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		final LocalDateTime deadlinedtm = LocalDateTime.parse("2015-13-10 16:20", f);
+		final LocalDateTime muistutusdtm = LocalDateTime.parse("2015-10-10 12:00", f);
+		
 		jdbcTemplate.update(new PreparedStatementCreator() {
 			
 			public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
@@ -50,10 +54,10 @@ public class TehtavaDaoImpl implements TehtavaDao {
 				ps.setInt(3, status);
 				
 				// MySQL-tietokannassa DATETIME-formaatti on muodossa [yyyy-mm-dd hh:mm:ss].
-				// Oikea muoto Javan date-oliosta saadaa java.sql.Timestamp:illa ja
+				// Oikea muoto Javan date-oliosta saadaa [java.sql.]Timestamp:illa ja
 				// PreparedStatementin setTimestamp:illa.
-				ps.setTimestamp(4, java.sql.Timestamp.valueOf(deadlinedtm));
-				ps.setTimestamp(5, java.sql.Timestamp.valueOf(muistutusdtm));
+				ps.setTimestamp(4, Timestamp.valueOf(deadlinedtm));
+				ps.setTimestamp(5, Timestamp.valueOf(muistutusdtm));
 				return ps;
 			}
 		});

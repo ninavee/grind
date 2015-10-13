@@ -1,8 +1,6 @@
 package bean;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public interface Tehtava {
 	
@@ -26,16 +24,7 @@ public interface Tehtava {
 	
 	public abstract void setPvmaika(LocalDateTime pvmaika);
 	
-	public abstract LocalDate getPvm();
-	
-	public abstract void setPvm(LocalDate pvm);
-	
-	public abstract LocalTime getAika();
-	
-	public abstract void setAika(LocalTime aika);
-	
 	public abstract LocalDateTime getMuistutusPvmaika();
 	
 	public abstract void setMuistutusPvmaika(LocalDateTime pvmaika);
-
 }

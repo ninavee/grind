@@ -1,4 +1,4 @@
-package dao;
+package task.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,11 +14,12 @@ import javax.inject.Inject;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
+
+import task.bean.Tehtava;
+
 //import org.springframework.jdbc.core.RowMapper;
 //import org.springframework.stereotype.Repository;
 import java.util.List;
-
-import bean.Tehtava;
 
 public class TehtavaDaoImpl implements TehtavaDao {
 	

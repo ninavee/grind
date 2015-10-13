@@ -1,4 +1,4 @@
-package dao;
+package task.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,8 +7,8 @@ import java.time.format.DateTimeFormatter;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import bean.Tehtava;
-import bean.TehtavaImpl;
+import task.bean.Tehtava;
+import task.bean.TehtavaImpl;
 
 public class TehtavaRowMapper implements RowMapper<Tehtava> {
 

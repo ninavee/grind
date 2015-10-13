@@ -1,8 +1,8 @@
-package dao;
+package task.dao;
 
 import java.util.List;
 
-import bean.Tehtava;
+import task.bean.Tehtava;
 
 public interface TehtavaDao {
 	

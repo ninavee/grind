@@ -1,4 +1,4 @@
-package bean;
+package task.bean;
 
 import java.time.LocalDateTime;
 

@@ -73,7 +73,7 @@ public class TehtavaDaoImpl implements TehtavaDao {
 		// TODO Auto-generated method stub
 		
 	}
-	
+	/*
 	//Tehtävän poisto
 	public void poistaTehtava(int id) {
 		try {
@@ -88,7 +88,7 @@ public class TehtavaDaoImpl implements TehtavaDao {
 		
 		
 	}
-	
+	*/
 	//Tehtävän muokkaus
 	
 	

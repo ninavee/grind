@@ -1,6 +1,6 @@
 package task.bean;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public interface Tehtava {
 	
@@ -20,11 +20,11 @@ public interface Tehtava {
 	
 	public abstract void setStatus(int status);
 	
-	public abstract LocalDateTime getPvmaika();
+	public abstract Date getPvmaika();
 	
-	public abstract void setPvmaika(LocalDateTime pvmaika);
+	public abstract void setPvmaika(Date pvmaika);
 	
-	public abstract LocalDateTime getMuistutusPvmaika();
+	public abstract Date getMuistutusPvmaika();
 	
-	public abstract void setMuistutusPvmaika(LocalDateTime pvmaika);
+	public abstract void setMuistutusPvmaika(Date pvmaika);
 }

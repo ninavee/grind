@@ -1,24 +1,25 @@
 package task.bean;
-import java.time.LocalDateTime;
+
+import java.util.Date;
 
 public class TehtavaImpl implements Tehtava {
 	private int id;
 	private String kuvaus;
 	private String lisatiedot;
 	private int status;
-	private LocalDateTime pvmaika;
-	private LocalDateTime muistutusPvmaika;
+	private Date pvmaika;
+	private Date muistutusPvmaika;
 	
 	public TehtavaImpl() {
 		this.id = 0;
-		this.kuvaus = "";
-		this.lisatiedot = "";
+		this.kuvaus = "Kuvaus";
+		this.lisatiedot = "Tiedot";
 		this.status = 0;
-		this.pvmaika = null;
-		this.muistutusPvmaika = null;
+		this.pvmaika = new Date();
+		this.muistutusPvmaika = new Date();
 	}
 
-	public TehtavaImpl(int id, String kuvaus, String lisatiedot, int status, LocalDateTime pvmaika, LocalDateTime muistutusPvm) {
+	public TehtavaImpl(int id, String kuvaus, String lisatiedot, int status, Date pvmaika, Date muistutusPvm) {
 		this.id = id;
 		this.kuvaus = kuvaus;
 		this.lisatiedot = lisatiedot;
@@ -43,11 +44,11 @@ public class TehtavaImpl implements Tehtava {
 		return status;
 	}
 
-	public LocalDateTime getPvmaika() {
+	public Date getPvmaika() {
 		return pvmaika;
 	}
 
-	public LocalDateTime getMuistutusPvmaika() {
+	public Date getMuistutusPvmaika() {
 		return muistutusPvmaika;
 	}
 
@@ -67,11 +68,11 @@ public class TehtavaImpl implements Tehtava {
 		this.status = status;
 	}
 
-	public void setPvmaika(LocalDateTime pvmaika) {
+	public void setPvmaika(Date pvmaika) {
 		this.pvmaika = pvmaika;
 	}
 
-	public void setMuistutusPvmaika(LocalDateTime muistutusPvmaika) {
+	public void setMuistutusPvmaika(Date muistutusPvmaika) {
 		this.muistutusPvmaika = muistutusPvmaika;
 	}
 }
